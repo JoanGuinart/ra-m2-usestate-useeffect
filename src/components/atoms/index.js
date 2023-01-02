@@ -1,0 +1,5 @@
+export { default as CircleSvg } from './Circle'
+export { default as SquareSvg } from './Square'
+export { default as TriangleSvg } from './Triangle'
+export { default as InputNumber } from './Input'
+export { default as Label } from './Label'
