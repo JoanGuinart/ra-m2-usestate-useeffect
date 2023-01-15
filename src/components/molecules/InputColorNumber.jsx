@@ -4,16 +4,19 @@ import { InputNumber, Label } from '../atoms'
 
 /* AQUI IMPORTEM COMPONENT LABEL I EL INPUT, PER CREAR EL COMPONENT CONJUNT DE TRIANGLE COLOR + INPUT */
 
-export default function InputColorNumber({ value ,text, onChangeColor, id }) {
+// Lo llamaria inputColorNumber
+export default function InputColorNumber({ value, text, onChangeColor, id }) {
   return (
     <div>
+      {/* No es necesario que InputNumber este dentro de label */}
       <Label htmlFor={id}>
         {`${text}color `}
-        <InputNumber 
-        value={value}
-        type="color" 
-        onChange={onChangeColor} 
-        id={id} />
+        <InputNumber
+          value={value}
+          type="color"
+          onChange={onChangeColor}
+          id={id}
+        />
       </Label>
     </div>
   )
@@ -22,6 +25,6 @@ export default function InputColorNumber({ value ,text, onChangeColor, id }) {
 InputColorNumber.propTypes = {
   text: PropTypes.string,
   onChangeColor: PropTypes.func,
-  id: PropTypes.string,
-  value: PropTypes.string
+  id: PropTypes.string, // Algunas props deberían ser requeridas
+  value: PropTypes.string,
 }
